@@ -1,6 +1,6 @@
 import styled from "styled-components"; // 引入一個可以寫 css 的 package
 import React, { useState, useRef } from "react"; // 要引入才可以用 state, ref
-import img from "./greenCompleted.png";
+import img from "./doneStamp.png";
 // 底下就是用 styled 寫的 css ，要 .創造的標籤
 // 然後就可以打一些 css, sass, scss 的寫法
 const Background = styled.div``;
@@ -49,11 +49,11 @@ const TodoContent = styled.div`
     props.isDone
       ? `&:after {
       content: '';
-      width: 180px;
-      height: 100px;
+      width: 90px;
+      height: 80px;
       position: absolute;
-      left: 450px;
-      top: -43px;
+      left: 535px;
+      top: -9px;
       background-image: url(${img});
       background-size: 100%;
       z-index: 1;
@@ -99,7 +99,7 @@ function Navbar({
         type="text"
         value={content}
         onChange={handleContentChange}
-        placeholder="type anything you want to do"
+        placeholder="Type something   (//●⁰౪⁰●)//"
         size="25"
       />
       <Button onClick={handleAdd}>add todo</Button>
