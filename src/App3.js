@@ -50,7 +50,7 @@ const TodoContent = styled.div`
       ? `&:after {
       content: '';
       width: 90px;
-      height: 80px;
+      height: 78px;
       position: absolute;
       left: 540px;
       top: -3px;
