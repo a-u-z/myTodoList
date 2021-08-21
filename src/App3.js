@@ -1,5 +1,6 @@
 import styled from "styled-components"; // 引入一個可以寫 css 的 package
 import React, { useState, useRef } from "react"; // 要引入才可以用 state, ref
+import img from "./greenCompleted.png";
 // 底下就是用 styled 寫的 css ，要 .創造的標籤
 // 然後就可以打一些 css, sass, scss 的寫法
 const Background = styled.div``;
@@ -36,13 +37,28 @@ const SingleTodoWrapper = styled.div`
   }
   margin-top: 15px;
 `;
+
 const TodoContent = styled.div`
   padding: 15px;
   font-size: 25px;
   color: rgba(2, 50, 80);
   word-break: break-all;
   width: 600px;
-  ${(props) => (props.isDone ? "text-decoration: line-through" : "")}
+  position: relative;
+  ${(props) =>
+    props.isDone
+      ? `&:after {
+      content: '';
+      width: 180px;
+      height: 100px;
+      position: absolute;
+      left: 450px;
+      top: -43px;
+      background-image: url(${img});
+      background-size: 100%;
+      z-index: 1;
+    }`
+      : ""}
 `;
 const ButtonWrapper = styled.div``;
 const Button = styled.button`
@@ -84,7 +100,7 @@ function Navbar({
         value={content}
         onChange={handleContentChange}
         placeholder="type anything you want to do"
-        size="30"
+        size="25"
       />
       <Button onClick={handleAdd}>add todo</Button>
       <Button
