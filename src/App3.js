@@ -40,8 +40,8 @@ const SingleTodoWrapper = styled.div`
 
 const TodoContent = styled.div`
   padding: 15px;
-  font-size: 25px;
-  color: rgba(2, 50, 80);
+  font-size: 35px;
+  color: #ffbde5;
   word-break: break-all;
   width: 600px;
   position: relative;
@@ -52,8 +52,8 @@ const TodoContent = styled.div`
       width: 90px;
       height: 80px;
       position: absolute;
-      left: 535px;
-      top: -9px;
+      left: 540px;
+      top: -3px;
       background-image: url(${img});
       background-size: 100%;
       z-index: 1;
